@@ -4,9 +4,93 @@
     <meta charset="utf-8">
     <title>Rock-Paper-Scisors</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+
+
+
+
+let comSelect;
+let playerSelect;
+
+
+function playGame (){
+playerSelect = prompt("Rock, Paper or Scisors?");
+computerPlay();
+playerSelect = playerSelect.toLowerCase();
+if (comSelect == playerSelect) {
+    console.log ("Nobody Wins! "+comSelect+" vs "+playerSelect)
+}
+else if (comSelect+playerSelect == "rockpaper") {
+    console.log("Player wins! Paper beats Rock!")
+}
+else if (comSelect+playerSelect == "rockscisors") {
+    console.log("Computer wins! Rock beats scisors!")
+}
+else if (comSelect+playerSelect == "paperrock") {
+    console.log("Computer wins! Paper beats rock!")
+}
+else if (comSelect+playerSelect == "paperscisors") {
+    console.log("Player wins! Scisors beats paper!")
+}
+else if (comSelect+playerSelect == "scisorsrock") {
+    console.log("Player wins! Rock beats scisors!")
+}
+else {
+    console.log("Computer wins! Scisors beats paper!")
+}
+}
+
+
+//return computer choice
+
+function computerPlay() {
+
+    comSelect = Math.floor(Math.random()*3);
+
+    if (comSelect == 0) {
+            comSelect = "rock";
+    
+        } else if (comSelect == 1){
+            comSelect = "paper";
+    
+        } else{
+            comSelect = "scisors";
+        }
+
+
+
+}
+
+
+//Runs game and adds points
+
+function game(){
+    gameNumber = prompt("How many games do you wanna play?");
+    for (gameNumber > 0; gameNumber--;) { 
+        
+        playGame();
+    }
+       
+    console.log(comSelect);
+    console.log(playerSelect);
+
+}
+
+
+
+
+
+
+
+</script>
+
 </head>
 
 <body>
+
+
+
 
 </body>
 
